@@ -1,0 +1,106 @@
+-- اول امر انشاء قاعده البيانات
+create database Highschool
+USE Highschool; -- استخدام قاعده البيانات
+
+-- إنشاء جدول الطلاب
+CREATE TABLE IF NOT EXISTS students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,  -- الرقم التسلسلي للطالب
+    student_name VARCHAR(100),                  -- اسم الطالب
+    date_of_birth DATE,                         -- تاريخ الميلاد
+    gender CHAR(1) CHECK (gender IN ('M', 'F')), -- الجنس (M أو F)
+    enrollment_date DATE,                       -- تاريخ الالتحاق
+    email VARCHAR(100),                         -- البريد الإلكتروني
+    academic_level INT CHECK (academic_level BETWEEN 1 AND 6), -- المستوى الدراسي (من 1 إلى 6)
+    track CHAR(1) CHECK (track IN ('S', 'H')),   -- المسار الدراسي (S علمي، H إنساني)
+    GPA DECIMAL(4, 2)                           -- المعدل التراكمي
+);
+
+-- إدخال بيانات الطلاب
+INSERT INTO students (student_name, date_of_birth, gender, enrollment_date, academic_level, track, GPA)
+VALUES 
+   ('Ali', '2007-08-15', 'M', '2023-09-01', 1, 'S', 85.50),
+    ('Sara', '2008-05-10', 'F', '2023-09-01', 1, 'H', 90.00),
+    ('Mohammed', '2007-10-01', 'M', '2023-09-01', 2, 'S', 78.00),
+    ('Yasmin', '2007-12-25', 'F', '2023-09-01', 2, 'H', 80.50),
+    ('Hassan', '2007-03-20', 'M', '2023-09-01', 3, 'S', 88.00),
+    ('Mona', '2008-01-11', 'F', '2023-09-01', 3, 'H', 92.00),
+    ('Khaled', '2007-08-22', 'M', '2023-09-01', 4, 'S', 85.00),
+    ('Fatima', '2007-11-14', 'F', '2023-09-01', 4, 'H', 77.00),
+    ('Aliya', '2007-07-30', 'F', '2023-09-01', 5, 'S', 82.50),
+    ('Mohammed', '2007-05-21', 'M', '2023-09-01', 5, 'H', 90.50),
+    ('Zainab', '2008-03-04', 'F', '2023-09-01', 6, 'S', 87.00),
+    ('Ibrahim', '2007-01-09', 'M', '2023-09-01', 6, 'H', 84.00),
+    ('Lina', '2008-06-12', 'F', '2023-09-01', 1, 'S', 91.00),
+    ('Tariq', '2007-10-10', 'M', '2023-09-01', 1, 'H', 80.00),
+    ('Faisal', '2008-11-20', 'M', '2023-09-01', 1, 'S', 83.00),
+    ('Rania', '2008-07-10', 'F', '2023-09-01', 2, 'S', 89.00),
+    ('Samir', '2007-06-25', 'M', '2023-09-01', 2, 'H', 86.00),
+    ('Khalil', '2008-05-19', 'M', '2023-09-01', 3, 'S', 91.00),
+    ('Layla', '2007-09-07', 'F', '2023-09-01', 3, 'H', 92.50),
+    ('Nadia', '2008-04-13', 'F', '2023-09-01', 4, 'S', 88.00),
+    ('Omar', '2007-11-04', 'M', '2023-09-01', 4, 'H', 81.50),
+    ('Ziad', '2008-03-23', 'M', '2023-09-01', 5, 'S', 80.50),
+    ('Alaa', '2007-07-18', 'F', '2023-09-01', 5, 'H', 85.00),
+    ('Kamal', '2008-02-01', 'M', '2023-09-01', 6, 'S', 84.00),
+    ('Noha', '2007-09-14', 'F', '2023-09-01', 6, 'H', 79.50),
+    ('Karim', '2008-06-25', 'M', '2023-09-01', 1, 'S', 88.50),
+    ('Salma', '2007-11-22', 'F', '2023-09-01', 1, 'H', 82.00),
+    ('Tariq', '2007-04-09', 'M', '2023-09-01', 2, 'S', 84.00),
+    ('Mariam', '2008-01-04', 'F', '2023-09-01', 2, 'H', 90.50);
+
+-- إنشاء جدول المعلمين
+CREATE TABLE IF NOT EXISTS teachers (
+    teacher_id INT AUTO_INCREMENT PRIMARY KEY,  -- الرقم التسلسلي للمعلم
+    teacher_name VARCHAR(100),                  -- اسم المعلم
+    date_of_birth DATE,                         -- تاريخ الميلاد
+    gender CHAR(1) CHECK (gender IN ('M', 'F')), -- الجنس (M أو F)
+    email VARCHAR(100),                         -- البريد الإلكتروني
+    office_number VARCHAR(20)                   -- رقم المكتب
+);
+
+-- إدخال بيانات المعلمين
+INSERT INTO teachers (teacher_name, date_of_birth, gender, email, office_number)
+VALUES 
+    ('Ahmed', '1980-05-15', 'M', 'ahmed@example.com', 'Room 101'),
+    ('Sara', '1975-09-20', 'F', 'sara@example.com', 'Room 102'),
+    ('Mohammed', '1982-11-10', 'M', 'mohammed@example.com', 'Room 103'),
+    ('Rania', '1985-04-07', 'F', 'rania@example.com', 'Room 104'),
+    ('Khaled', '1990-02-25', 'M', 'khaled@example.com', 'Room 105'),
+    ('Mona', '1988-01-18', 'F', 'mona@example.com', 'Room 106'),
+    ('Ali', '1985-03-12', 'M', 'ali@example.com', 'Room 107'),
+    ('Yasmin', '1992-07-30', 'F', 'yasmin@example.com', 'Room 108'),
+    ('Samir', '1984-12-09', 'M', 'samir@example.com', 'Room 109'),
+    ('Layla', '1983-06-14', 'F', 'layla@example.com', 'Room 110');
+
+-- إنشاء جدول المواد
+CREATE TABLE IF NOT EXISTS subjects (
+    subject_id INT AUTO_INCREMENT PRIMARY KEY,   -- الرقم التسلسلي للمادة
+    subject_name VARCHAR(100)                    -- اسم المادة
+);
+
+-- إدخال بيانات المواد
+INSERT INTO subjects (subject_name)
+VALUES 
+    ('Math'),
+    ('Science'),
+    ('History'),
+    ('Geography'),
+    ('English'),
+    ('Arabic');
+
+-- استعلام لعرض جميع الطلاب
+SELECT * FROM students;
+
+-- استعلام لعرض جميع المعلمين
+SELECT * FROM teachers;
+
+-- استعلام لعرض جميع المواد
+SELECT * FROM subjects;
+
+-- تحديث بيانات طالب
+UPDATE students
+SET email = 'newemail@example.com'
+WHERE student_id = 1;
+
+-- استعلام لعرض الطلاب بعد التعديل
+SELECT * FROM students;
