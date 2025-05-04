@@ -10,7 +10,7 @@ This project is a database for managing students, teachers, and subjects at a hi
 
 ## SQL Operations:
 - Create tables for students, teachers, and subjects.
-- Insert data for 30 students, 10 teachers, and 6 subjects.
+- Insert data for 29 students, 10 teachers, and 6 subjects.
 - Display data from tables and order by student name.
 - Perform SELECT, UPDATE, and DELETE operations on the data.
 
