@@ -18,6 +18,4 @@ This project is a database for managing students, teachers, and subjects at a hi
 - **MySQL** for database management.
 - **SQL** for writing queries.
 
-## Link to the database schema and queries:
-
-[Link to schema and queries](https://github.com/Yousefalatawi/HighSchool-Database/blob/main/Highschool%20database.sql)
+ 
