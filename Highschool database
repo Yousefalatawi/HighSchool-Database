@@ -1,5 +1,5 @@
 -- اول امر انشاء قاعده البيانات
-create database Highschool
+--create database Highschool
 USE Highschool; -- استخدام قاعده البيانات
 
 -- إنشاء جدول الطلاب
