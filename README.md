@@ -1,21 +1,52 @@
-# HighSchool-Database
-# High School Database Project
+#  High School Database Project
 
-This project is a database for managing students, teachers, and subjects at a high school.
+This project simulates a simple school database system using **MySQL**, designed to manage students, teachers, and subjects.
 
-## Tables:
-- `students`: Contains information about students including ID, name, gender, enrollment date, GPA, etc.
-- `teachers`: Contains information about teachers including ID, name, gender, email, office number, etc.
-- `subjects`: Contains information about subjects offered at the school.
+---
 
-## SQL Operations:
-- Create tables for students, teachers, and subjects.
-- Insert data for 29 students, 10 teachers, and 6 subjects.
-- Display data from tables and order by student name.
-- Perform SELECT, UPDATE, and DELETE operations on the data.
+##  Project Overview
 
-## Technologies Used:
-- **MySQL** for database management.
-- **SQL** for writing queries.
+The database was created from scratch and includes the following main components:
+
+### Tables
+
+- students: ID, name, gender, birth date, GPA, national ID
+- teachers: ID, name, gender, email, office number
+-subjects: ID, name, assigned teacher ID (
+
+---
+
+##  SQL Operations Implemented
+
+- Create and normalize all tables
+- Use primary and foreign keys
+- Insert sample data (29 students, 10 teachers, 6 subjects)
+- Perform:
+  - `SELECT` queries with filters and ordering
+  - `JOIN` between tables
+  - `UPDATE`, `DELETE`, and `ALTER TABLE`
+- Apply indexing for performance
+
+---
+
+## Key Concepts Practiced
+
+- Relational database design  
+- Data integrity using constraints  
+- Query optimization with indexes  
+- Real-world data modeling
+
+---
+
+## Technologies Used
+
+- MySQL for database management  
+- SQL for queries and operations  
+- Developed using MySQL Workbench
+
+ Author
+
+[Yousef Alatawi](https://github.com/Yousefalatawi)
+
 
  
